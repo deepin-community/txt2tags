@@ -1,0 +1,2 @@
+?package(txt2tags):needs="text" section="Applications/Text" \
+  title="txt2tags" command="/usr/bin/txt2tags"

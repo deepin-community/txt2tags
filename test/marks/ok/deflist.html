@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="http://txt2tags.org">
+<style>
+body{background-color:#fff;color:#000;}
+hr{background-color:#000;border:0;color:#000;}
+hr.heavy{height:5px;}
+hr.light{height:1px;}
+img{border:0;display:block;}
+img.right{margin:0 0 0 auto;}
+img.center{border:0;margin:0 auto;}
+table th,table td{padding:4px;}
+.center,header{text-align:center;}
+table.center {margin-left:auto; margin-right:auto;}
+.right{text-align:right;}
+.left{text-align:left;}
+.tableborder,.tableborder td,.tableborder th{border:1px solid #000;}
+.underline{text-decoration:underline;}
+</style>
+</head>
+<body>
+<header>
+<hgroup>
+</hgroup>
+</header>
+<article>
+
+<div class="body" id="body">
+
+<section~A~>
+<h1></h1>
+<section>
+<h2>Items: Prefixed by colon</h2>
+
+<dl>
+<dt>Use the colon to prefix list items.</dt><dd>
+</dd>
+<dt>There must be one space after the colon.</dt><dd>
+</dd>
+<dt>The list is closed by two consecutive blank lines.</dt><dd>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Items: Free leading spacing (indentation)</h2>
+
+     <dl>
+     <dt>The list can be indented on the source document.</dt><dd>
+     </dd>
+     <dt>You can use any number of spaces.</dt><dd>
+     </dd>
+     <dt>The result will be the same.</dt><dd>
+     </dd>
+     </dl>
+
+</section>
+<section>
+<h2>Items: Vertical spacing between items</h2>
+
+<dl>
+<dt>Let one blank line between the list items.</dt><dd>
+<p></p>
+</dd>
+<dt>It will be maintained on the conversion.</dt><dd>
+<p></p>
+</dd>
+<dt>Some targets don't support this behavior.</dt><dd>
+<p></p>
+</dd>
+<dt>This one was separated by a line with blanks.</dt><dd>
+  You can also put a blank line inside
+<p></p>
+  the item contents and it will be preserved.
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Items: Exactly ONE space after the colon</h2>
+
+<p>
+:This is not a list (no space)
+</p>
+
+<dl>
+<dt>   This is not a list (more than one space)</dt><dd>
+<p></p>
+:	This is not a list (a TAB instead the space)
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Items: Catchy cases</h2>
+
+<dl>
+<dt>- This is a list</dt><dd>
+</dd>
+<dt>+ This is a list</dt><dd>
+</dd>
+<dt>: This is a list</dt><dd>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Nesting: Creating sublists</h2>
+
+<dl>
+<dt>This is the "mother" list first item.</dt><dd>
+</dd>
+<dt>Here is the second, but inside this item,</dt><dd>
+  <dl>
+  <dt>there is a sublist, with its own items.</dt><dd>
+  </dd>
+  <dt>Note that the items of the same sublist</dt><dd>
+  </dd>
+  <dt>must have the same indentation.</dt><dd>
+    <dl>
+    <dt>And this can go on, opening sublists.</dt><dd>
+      <dl>
+      <dt>Just add leading spaces before the</dt><dd>
+      </dd>
+      <dt>colon and sublists will be opened.</dt><dd>
+      </dd>
+      <dt>The two blank lines closes them all.</dt><dd>
+      </dd>
+      </dl>
+    </dd>
+    </dl>
+  </dd>
+  </dl>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Nesting: Free leading spacing (indentation)</h2>
+
+<dl>
+<dt>When nesting lists, the additional spaces are free.</dt><dd>
+ <dl>
+ <dt>You can add just one,</dt><dd>
+        <dl>
+        <dt>or many.</dt><dd>
+          <dl>
+          <dt>What matters is to put more than the previous.</dt><dd>
+          </dd>
+          <dt>But remember that the other items of the same list</dt><dd>
+          </dd>
+          <dt>must use the same indentation.</dt><dd>
+          </dd>
+          </dl>
+        </dd>
+        </dl>
+ </dd>
+ </dl>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Nesting: Maximum depth</h2>
+
+<dl>
+<dt>There is not a depth limit,</dt><dd>
+  <dl>
+  <dt>you can go deeper and deeper.</dt><dd>
+    <dl>
+    <dt>But some targets may have restrictions.</dt><dd>
+      <dl>
+      <dt>The LaTeX maximum is here, 4 levels.</dt><dd>
+        <dl>
+        <dt>This one and the following sublists</dt><dd>
+          <dl>
+          <dt>are moved up to the level 4</dt><dd>
+            <dl>
+            <dt>when converting to LaTeX.</dt><dd>
+              <dl>
+              <dt>On the other targets,</dt><dd>
+                <dl>
+                <dt>it is just fine</dt><dd>
+                  <dl>
+                  <dt>to have a very deep list.</dt><dd>
+                  </dd>
+                  </dl>
+                </dd>
+                </dl>
+              </dd>
+              </dl>
+            </dd>
+            </dl>
+          </dd>
+          </dl>
+        </dd>
+        </dl>
+      </dd>
+      </dl>
+    </dd>
+    </dl>
+  </dd>
+  </dl>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Nesting: Reverse doesn't work</h2>
+
+        <dl>
+        <dt>Reverse nesting doesn't work.</dt><dd>
+        </dd>
+        </dl>
+
+      <dl>
+      <dt>Because a sublist *must* have a mother list.</dt><dd>
+      </dd>
+      </dl>
+
+    <dl>
+    <dt>It's the list concept, not a txt2tags limitation.</dt><dd>
+    </dd>
+    </dl>
+
+  <dl>
+  <dt>All this sublists will be bumped to mother lists.</dt><dd>
+  </dd>
+  </dl>
+
+<dl>
+<dt>At level 1, like this one.</dt><dd>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Nesting: Going deeper and back</h2>
+
+<dl>
+<dt>Level 1</dt><dd>
+  <dl>
+  <dt>Level 2</dt><dd>
+    <dl>
+    <dt>Level 3</dt><dd>
+      <dl>
+      <dt>Level 4</dt><dd>
+      </dd>
+      </dl>
+    </dd>
+    <dt>Level 3 -- (closed Level 4)</dt><dd>
+    </dd>
+    </dl>
+  </dd>
+  <dt>Level 2 -- (closed Level 3)</dt><dd>
+  </dd>
+  </dl>
+</dd>
+<dt>Level 1 -- (closed Level 2)</dt><dd>
+</dd>
+</dl>
+
+<dl>
+<dt>Level 1</dt><dd>
+  <dl>
+  <dt>Level 2</dt><dd>
+    <dl>
+    <dt>Level 3</dt><dd>
+      <dl>
+      <dt>Level 4</dt><dd>
+      </dd>
+      </dl>
+    </dd>
+    </dl>
+  </dd>
+  </dl>
+</dd>
+<dt>Level 1 -- (closed Level 4, Level 3 and Level 2)</dt><dd>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Nesting: Vertical spacing between lists</h2>
+
+<dl>
+<dt>Level 1</dt><dd>
+<p></p>
+  <dl>
+  <dt>Level 2 -- blank BEFORE and AFTER (in)</dt><dd>
+  <p></p>
+    <dl>
+    <dt>Level 3</dt><dd>
+      <dl>
+      <dt>Level 4</dt><dd>
+      </dd>
+      </dl>
+    </dd>
+    <dt>Level 3</dt><dd>
+    <p></p>
+    </dd>
+    </dl>
+  </dd>
+  <dt>Level 2 -- blank BEFORE and AFTER (out)</dt><dd>
+  <p></p>
+  </dd>
+  </dl>
+</dd>
+<dt>Level 1</dt><dd>
+<p></p>
+  <dl>
+  <dt>Level 2 -- blank BEFORE (spaces) and AFTER (TAB)</dt><dd>
+  <p></p>
+    <dl>
+    <dt>Level 3</dt><dd>
+    </dd>
+    </dl>
+  </dd>
+  </dl>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Nesting: Messing up</h2>
+
+<dl>
+<dt>Level 1</dt><dd>
+    <dl>
+    <dt>Level 2</dt><dd>
+        <dl>
+        <dt>Level 3</dt><dd>
+            <dl>
+            <dt>Level 4</dt><dd>
+            </dd>
+            </dl>
+        </dd>
+        <dt>Level 3.5 ???</dt><dd>
+        </dd>
+        <dt>Level 3</dt><dd>
+        </dd>
+        </dl>
+    </dd>
+    <dt>Level 2.5 ???</dt><dd>
+    </dd>
+    <dt>Level 2</dt><dd>
+    </dd>
+    </dl>
+</dd>
+<dt>Level 1.5 ???</dt><dd>
+</dd>
+<dt>Level 1</dt><dd>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Closing: Two (not so) empty lines</h2>
+
+<dl>
+<dt>This list is closed by a line with spaces and other with TABs</dt><dd>
+</dd>
+</dl>
+
+<dl>
+<dt>This list is NOT closed by two comment lines</dt><dd>
+</dd>
+<dt>This list is closed by a line with spaces and TAB,</dt><dd>
+</dd>
+<dt>then a comment line, then an empty line.</dt><dd>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Closing: Empty item closes current (sub)list</h2>
+
+<dl>
+<dt>Level 1</dt><dd>
+  <dl>
+  <dt>Level 2</dt><dd>
+    <dl>
+    <dt>Level 3</dt><dd>
+    </dd>
+    </dl>
+    Level 2
+  </dd>
+  </dl>
+  Level 1
+</dd>
+</dl>
+
+<dl>
+<dt>Empty item with trailing spaces.</dt><dd>
+</dd>
+</dl>
+
+<dl>
+<dt>Empty item with trailing TAB.</dt><dd>
+</dd>
+</dl>
+
+</section>
+<section>
+<h2>Closing: EOF closes the lists</h2>
+
+<dl>
+<dt>If the end of the file (EOF) is hit,</dt><dd>
+  <dl>
+  <dt>all the currently opened list are closed,</dt><dd>
+    <dl>
+    <dt>just like when using the two blank lines.</dt><dd>
+    </dd>
+    </dl>
+  </dd>
+  </dl>
+</dd>
+</dl>
+
+</section>
+</section>
+</div>
+<!-- html code generated by txt2tags (http://txt2tags.org) -->
+<!-- cmdline: txt2tags -q -\-no-rc -C config -o deflist.html list.t2t -->
+</article></body></html>

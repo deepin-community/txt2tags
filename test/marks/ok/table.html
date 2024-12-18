@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="http://txt2tags.org">
+<style>
+body{background-color:#fff;color:#000;}
+hr{background-color:#000;border:0;color:#000;}
+hr.heavy{height:5px;}
+hr.light{height:1px;}
+img{border:0;display:block;}
+img.right{margin:0 0 0 auto;}
+img.center{border:0;margin:0 auto;}
+table th,table td{padding:4px;}
+.center,header{text-align:center;}
+table.center {margin-left:auto; margin-right:auto;}
+.right{text-align:right;}
+.left{text-align:left;}
+.tableborder,.tableborder td,.tableborder th{border:1px solid #000;}
+.underline{text-decoration:underline;}
+</style>
+</head>
+<body>
+<header>
+<hgroup>
+</hgroup>
+</header>
+<article>
+
+<div class="body" id="body">
+
+<section~A~>
+<h1></h1>
+<section>
+<h2>Syntax: Lines starting with a pipe |</h2>
+
+<table>
+<tr>
+<td>Cell 1</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Syntax: Extra pipes separate cells</h2>
+
+<table>
+<tr>
+<td>Cell 1</td>
+<td>Cell 2</td>
+<td>Cell 3</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Syntax: With a trailing pipe, make border</h2>
+
+<table class="tableborder">
+<tr>
+<td>Cell 1</td>
+<td>Cell 2</td>
+<td>Cell 3</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Syntax: Table lines starting with double pipe are heading</h2>
+
+<table class="tableborder">
+<tr>
+<th>Cell 1</th>
+<th>Cell 2</th>
+<th>Cell 3</th>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Align: Spaces before the leading pipe centralize the table</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+<tr>
+<td>Cell 1</td>
+<td>Cell 2</td>
+<td>Cell 3</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Align: Spaces inside the cell denote its alignment</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+<tr>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+</tr>
+<tr>
+<td>&lt;-</td>
+<td class="center">--</td>
+<td class="right">-&gt;</td>
+</tr>
+<tr>
+<td class="center">--</td>
+<td class="center">--</td>
+<td class="center">--</td>
+</tr>
+<tr>
+<td class="right">-&gt;</td>
+<td class="center">--</td>
+<td>&lt;-</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Span: Column span is defined by extra pipes at cell closing</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+<tr>
+<th>1</th>
+<th>2</th>
+<th colspan="2">3+4</th>
+</tr>
+<tr>
+<td class="center">1</td>
+<td class="center">2</td>
+<td class="center">3</td>
+<td class="center">4</td>
+</tr>
+<tr>
+<td class="center" colspan="3">1+2+3</td>
+<td class="center">4</td>
+</tr>
+<tr>
+<td class="center">1</td>
+<td class="center" colspan="2">2+3</td>
+<td class="center">4</td>
+</tr>
+<tr>
+<td class="center" colspan="4">1+2+3+4</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Test: Empty cells are placed as expected</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+<tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td></td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td></td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Test: Lines with different number of cells</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+<tr>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Test: Empty cells + Span + Messy cell number = Fun!</h2>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+<tr>
+<td class="right">Jan</td>
+</tr>
+<tr>
+<td class="right" colspan="2">Fev</td>
+</tr>
+<tr>
+<td class="right" colspan="3">Mar</td>
+</tr>
+<tr>
+<td class="right" colspan="4">Apr</td>
+</tr>
+<tr>
+<td class="right" colspan="5">May</td>
+</tr>
+<tr>
+<td class="center">20%</td>
+<td class="center">40%</td>
+<td class="center">60%</td>
+<td class="center">80%</td>
+<td class="center">100%</td>
+</tr>
+</table>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+<tr>
+<td></td>
+<td></td>
+<td class="center">/</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td class="center" colspan="3">/ / / / /</td>
+<td></td>
+</tr>
+<tr>
+<td class="center" colspan="5">/ / / / / / / / /</td>
+</tr>
+<tr>
+<td></td>
+<td class="center">o</td>
+<td></td>
+<td class="center">o</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td class="right">.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td class="center" colspan="3">= = = =</td>
+<td></td>
+</tr>
+</table>
+
+<table style="margin-left: auto; margin-right: auto;" class="tableborder">
+<tr>
+<td>01</td>
+<td>02</td>
+<td></td>
+<td></td>
+<td>05</td>
+<td></td>
+<td>07</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>11</td>
+<td></td>
+<td>13</td>
+<td></td>
+<td></td>
+<td>16</td>
+</tr>
+<tr>
+<td>17</td>
+<td></td>
+<td>19</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td>23</td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td>26</td>
+<td></td>
+<td></td>
+<td>29</td>
+<td>30</td>
+<td></td>
+<td>32</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>35</td>
+<td></td>
+<td>37</td>
+<td></td>
+<td>39</td>
+<td>40</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Test: Lots of cells at the same line</h2>
+
+<table class="tableborder">
+<tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Test: Empty lines</h2>
+
+<table class="tableborder">
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+
+</section>
+<section>
+<h2>Invalid: There must be at least one space around the pipe</h2>
+
+<p>
+|this|is|not|a|table|
+</p>
+<p>
+|this| is| not| a| table|
+</p>
+<p>
+|this |is |not |a |table |
+</p>
+
+</section>
+<section>
+<h2>Invalid: You must use spaces, not TABs</h2>
+
+<p>
+|	this	|	is	|	not	|	a	|	table	|
+</p>
+</section>
+</section>
+</div>
+
+<!-- html code generated by txt2tags (http://txt2tags.org) -->
+<!-- cmdline: txt2tags -q -\-no-rc table.t2t -->
+</article></body></html>

@@ -1,5 +1,221 @@
-template-repository (1.0-1) unstable; urgency=medium
+txt2tags (3.4-4) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Use secure URI in Homepage field.
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.6.1, no changes needed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Wed, 16 Nov 2022 10:20:53 +0000
+
+txt2tags (3.4-3) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 16 Sep 2021 23:35:52 -0400
+
+txt2tags (3.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add python3-pkg-resources to Depends; Closes: #947482
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 29 Dec 2019 14:55:22 -0500
+
+txt2tags (3.4-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/patches/reproducible.patch
+    - drop patch, no longer required
+  * debian/rules
+    - re-enable tests failure, now that upstream tests are fixed
+  * debian/patches/py3k-shebang.patch
+    - force python3 on the shebangs of top-level scripts
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 25 Dec 2019 20:46:39 -0500
+
+txt2tags (3.3-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Sandro Tosi ]
+  * New upstream release
+  * debian/copyright
+    - update upstream copyright notice
+  * debian/patches
+    - refresh, drop patches according to new upstream code
+  * debian/rules
+    - disable tests until https://github.com/txt2tags/txt2tags/issues/211 is
+      fixed
+  * Switch to python3; Closes: #938735
+  * debian/control
+    - mark txt2tags Multi-Arch: foreign; patch by Helmut Grohne; Closes: #939913
+    - bump Standards-Version to 4.4.1 (no changes needed)
+    - add setuptools to b-d
+
+ -- Sandro Tosi <morph@debian.org>  Tue, 24 Dec 2019 19:50:18 -0500
+
+txt2tags (2.6-4) unstable; urgency=medium
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+  * Run tests only if DEB_BUILD_OPTIONS=nocheck is not set.
+
+  [ Ondřej Nový ]
+  * d/changelog: Remove trailing whitespaces
+  * d/control: Remove trailing whitespaces
+
+  [ Jonathan Wiltshire ]
+  * Team upload.
+  * debian/patches/reproducible.patch: make reproducible.
+    Thanks to Chris Lamb (Closes: #829325)
+  * Move to debhelper compat level 11
+  * Rewrite patches/po-makefile.patch, build .mo files properly
+    (Closes: #684275)
+  * debian/patches/doc-makefile.patch: rewrite for more flexibility
+  * Move to pybuild
+  * Update debian/watch
+  * Standards-version 4.1.4 (no changes)
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Sun, 22 Apr 2018 18:07:13 +0100
+
+txt2tags (2.6-3) unstable; urgency=low
+
+  * Rebuild for Python 2.7 as default
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Sat, 16 Apr 2011 16:39:44 +0100
+
+txt2tags (2.6-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Convert to source format 3.0 (quilt) and remove quilt logic
+  * Convert to dh_python2
+  * Improve long description
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Mon, 07 Feb 2011 00:08:54 +0000
+
+txt2tags (2.6-1) experimental; urgency=low
+
+  [ Ales Zabala Alava (Shagi) ]
+  * debian/watch
+     - Update watch file to match new googlecode layout
+
+
+  [ Jonathan Wiltshire ]
+  * New upstream release
+  * Update all patches for new release
+  * Standards-version 3.9.1 (no changes required)
+  * Deprecate debian/pyversions and specify Python version in
+    debian/control instead
+  * debian/docs: TODO is no longer shipped; do not try to install it
+  * debian/rules: there's no longer any need to clean up MacOS files
+  * debian/rules: Run the test suite
+  * Update years in debian/copyright
+  * Update my email address
+
+ -- Jonathan Wiltshire <jmw@debian.org>  Fri, 03 Dec 2010 21:45:45 +0000
+
+txt2tags (2.5-2) unstable; urgency=low
+
+  [ Jonathan Wiltshire ]
+  * debian/rules: Add call to dh_clean during clean sequence (closes: #541131)
+  * Install as a public Python module and make /usr/bin/txt2tags
+    import it (closes: #537797)
+  * debian/control:
+     - Remove quote marks from Uploaders field
+     - Standards version 3.8.3
+  * Add README.source
+  * txt2tags.docbase*: Register documentation with doc-base
+
+  [ Ales Zabala Alava (Shagi) ]
+  * debian/watch
+        - Fix watch file to scan in googlecode
+
+ -- Jonathan Wiltshire <debian@jwiltshire.org.uk>  Sun, 04 Oct 2009 15:31:15 +0100
+
+txt2tags (2.5-1) unstable; urgency=low
+
+  [ Eder L. Marques ]
+  * New upstream release. Closes: #434547, #451341, #492668,
+    #290806, #290928.
+  *  debian/control:
+        - Bump Standards-Version to 3.8.0 (without modifications).
+        - New short description. Closes: #466632.
+        - Updated long description.
+        - Changed section to misc.
+        - Updated build-depends.
+  *  debian/compat:
+  	- Changed to version 7.
+  *  debian/copyright:
+        - Inserted the new maintainer.
+  * debian/watch:
+        - Updated to version 3.
+  * debian/docs:
+        - Removed obsolete entries.
+  * txt2tags-2.3/po/Makefile:
+        - Added new catalogs.
+
+  [ Jonathan Wiltshire ]
+  * Make debian/watch use the qa.debian.org SourceForge redirector
+  * Bring txt2tags into the Python Applications Packaging Team and set
+    appropriate uploaders
+  * Install manual pages in all supplied languages (using a makefile and
+    dh_installman)
+  * Convert packaging to use debhelper's auto-sequencer
+  * Update information in debian/copyright and debian/README.Debian
+  * Use quilt patch system; convert all current changes to quilt patches
+  * Change menu location from Apps to Applications and quote menu file
+    properly
+  * Standards-Version 3.8.2 (no changes)
+  * Clean up MacOS temporary files in the build tree just before dh_compress
+  * Patch up man errors as flagged by lintian
+  * Add VCS- fields to debian/control
+
+ -- Jonathan Wiltshire <debian@jwiltshire.org.uk>  Sun, 09 Aug 2009 21:32:34 +0100
+
+txt2tags (2.3-1) unstable; urgency=low
+
+  * New upstream release (Closes: #290800)
+  * debian/changelog: Suggests: python-tk (if you need GUI)
+  * debian/control:
+    - bumped policy version to 3.7.2
+    - build-depends-indep becomes build-depends
+    - new build-depends on gettext to build .mo files
+  * debian/rules: calls to po/Makefile and related clean
+  * debian/Readme.Debian: note about GUI
+  * doc/manpage.man: right options preproc/postproc now (Closes: #364911)
+  * po/Makefile: added, to build .mo files
+
+ -- Christian Surchi <csurchi@debian.org>  Mon, 24 Jul 2006 01:16:08 +0200
+
+txt2tags (2.0-1) unstable; urgency=low
+
+  * New upstream release
+    Fixed failures (Closes: #240080)
+  * New debian/docs following new organisation for documentation
+  * Fixed debian/watch for uscan
+  * Installed t2tconv in doc directory
+
+ -- Christian Surchi <csurchi@debian.org>  Mon, 16 Aug 2004 01:47:54 +0200
+
+txt2tags (1.7-1) unstable; urgency=low
+
+  * New upstream release
+  * Removed "debian" man page for the new upstream one
+
+ -- Christian Surchi <csurchi@debian.org>  Wed,  2 Jun 2004 23:42:07 +0200
+
+txt2tags (1.6-1) unstable; urgency=low
+
+  * Initial Release. Let's close ITP bug (Closes: #144507).
+
+ -- Christian Surchi <csurchi@debian.org>  Sun, 17 Aug 2003 15:42:25 +0200
