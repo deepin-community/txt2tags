@@ -1,0 +1,14 @@
+txt2tags for Debian
+-------------------
+
+Look at /usr/share/doc/txt2tags for documentation, extras and examples.
+
+If you need GUI, you need to install the suggested python-tk package.
+
+ -- Christian Surchi <csurchi@debian.org>, Mon, 24 Jul 2006 01:16:08 +0200
+
+
+txt2tags is now maintained under the Debian Python Applications Packaging
+Team.
+
+ -- Jonathan Wiltshire <debian@jwiltshire.org.uk>, Sun, 09 August 2009 00:43:00 +0100

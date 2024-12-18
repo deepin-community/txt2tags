@@ -1,0 +1,4 @@
+# Compulsory line, this is a version 3 file
+version=4
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/txt2tags-$1\.tar\.gz/ \
+  https://github.com/txt2tags/txt2tags/tags .*/v?(\d\S+)\.tar\.gz

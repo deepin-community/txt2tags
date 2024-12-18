@@ -1,0 +1,28 @@
+Build and install l10n files for txt2tags
+--- /dev/null
++++ txt2tags/po/Makefile
+@@ -0,0 +1,24 @@
++INSTALL= /usr/bin/install -c
++INSTALLNLSDIR=$(BASEDIR)/usr/share/locale
++
++PACKAGE = txt2tags
++
++CATALOGS = de.mo es.mo eu.mo fi.mo fr.mo hu.mo it.mo pt_BR.mo uk.mo zh_CN.mo
++
++%.mo: %.po
++	msgfmt --check --output-file=$@ $<
++
++build: $(CATALOGS)
++
++clean:
++	rm -f *.mo
++
++distclean: clean
++
++install: $(CATALOGS)
++	for n in $(CATALOGS); do \
++	    l=`basename $$n .mo`; \
++	    $(INSTALL) -m 755 -d $(INSTALLNLSDIR)/$$l; \
++	    $(INSTALL) -m 755 -d $(INSTALLNLSDIR)/$$l/LC_MESSAGES; \
++	    $(INSTALL) -m 644 $$n $(INSTALLNLSDIR)/$$l/LC_MESSAGES/$(PACKAGE).mo; \
++	done

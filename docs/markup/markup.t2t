@@ -1,0 +1,114 @@
+Txt2tags Markup Demo
+See marks converted to HTML
+
+%!target: html
+%!encoding: UTF-8
+%!preproc: t2t\.png ../../samples/img/t2tpowered.png
+%!options: -o markup.html
+
+''' <table>
+''' <tr><th colspan="2">
+
+''' BASIC
+
+''' </th></tr><tr><td class="t2t">
+%!include: ``title.t2t``
+''' </td><td>
+%!include: title.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``numtitle.t2t``
+''' </td><td>
+%!include: numtitle.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``para.t2t``
+''' </td><td>
+%!include: para.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``comment.t2t``
+''' </td><td>
+%!include: comment.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``beauti.t2t``
+''' </td><td>
+%!include: beauti.t2t
+
+''' </td></tr><tr><th colspan="2">
+
+''' LISTS
+
+''' </th></tr><tr><td class="t2t">
+%!include: ``list.t2t``
+''' </td><td>
+%!include: list.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``numlist.t2t``
+''' </td><td>
+%!include: numlist.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``deflist.t2t``
+''' </td><td>
+%!include: deflist.t2t
+
+''' </td></tr><tr><th colspan="2">
+
+''' AREAS
+
+''' </th></tr><tr><td class="t2t">
+%!include: ``quote.t2t``
+''' </td><td>
+%!include: quote.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``verbline.t2t``
+''' </td><td>
+%!include: verbline.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``verb.t2t``
+''' </td><td>
+%!include: verb.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``raw.t2t``
+''' </td><td>
+%!include: raw.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``tagged.t2t``
+''' </td><td>
+%!include: tagged.t2t
+
+''' </td></tr><tr><th colspan="2">
+
+''' OTHER
+
+''' </th></tr><tr><td class="t2t">
+%!include: ``table.t2t``
+''' </td><td>
+%!include: table.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``image.t2t``
+''' </td><td>
+%!include: image.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``link.t2t``
+''' </td><td>
+%!include: link.t2t
+
+''' </td></tr><tr><td class="t2t">
+%!include: ``bar.t2t``
+''' </td><td>
+%!include: bar.t2t
+
+''' </td></tr>
+''' </table>
+
+[Go to the txt2tags website http://txt2tags.org]
